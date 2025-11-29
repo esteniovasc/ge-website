@@ -1,23 +1,39 @@
-/* Configuração de Ambiente
-   Altere 'CURRENT_ENV' para 'DEV' ou 'PROD' para mudar o comportamento dos links.
-*/
+/* Configuração de Ambiente Automática */
+
+// Detecta se está rodando localmente (arquivo ou localhost)
+const isLocal = window.location.hostname === 'localhost' || 
+                window.location.hostname === '127.0.0.1' || 
+                window.location.protocol === 'file:';
 
 const CONFIG = {
-    CURRENT_ENV: 'PROD', // 'DEV' = Links locais | 'PROD' = Links públicos/Em breve
+    // Se for local, usa DEV. Se não, usa PROD.
+    CURRENT_ENV: isLocal ? 'DEV' : 'PROD',
 
     URLS: {
         DEV: {
-            LOGIN: 'http://localhost:5173/login', // Seu front do App rodando local
-            API: 'http://localhost:3333'          // Seu back rodando local
+            API: 'http://localhost:3333',
+            // Links externos (abre em nova aba se for DEV)
+            LOGIN: 'http://localhost:5173/login',
+            
+            // Links internos locais DEVEM ser apenas o nome do arquivo (SEM a barra / na frente)
+            HOME: 'index.html',
+            CADASTRO: 'cadastro.html',
+            VALIDAR: 'validar-documentos.html'
         },
         PROD: {
-            LOGIN: 'em-breve.html',               // Página de "Em construção"
-            API: 'http://localhost:3333'          // (Mesmo em Prod, manteremos local por enquanto conforme seu pedido, ou deixamos vazio para travar)
+            API: 'https://api-gestao.onrender.com', // (Substituir quando tiver o deploy do back)
+            // Links externos
+            LOGIN: 'em-breve.html',
+            
+            // Links internos produção (COM a barra / para URLs limpas)
+            HOME: '/',
+            CADASTRO: '/cadastro',
+            VALIDAR: '/validar-documentos'
         }
     }
 };
 
 // Função auxiliar para pegar a URL correta
-function getUrl(type) {
-    return CONFIG.URLS[CONFIG.CURRENT_ENV][type];
+function getUrl(key) {
+    return CONFIG.URLS[CONFIG.CURRENT_ENV][key];
 }

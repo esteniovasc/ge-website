@@ -1,25 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 0. Gerenciador de Links de Ambiente (NOVO) ---
+    /* --- 0. Gerenciador de Links de Ambiente --- */
     function updateEnvironmentLinks() {
-        // Pega todos os elementos com a classe marcadora
-        const loginLinks = document.querySelectorAll('.js-login-link');
-        
-        // Pega a URL correta baseada no CONFIG (Definido no config.js)
-        // Se CONFIG não existir (erro de importação), usa #
-        const targetUrl = (typeof CONFIG !== 'undefined') ? getUrl('LOGIN') : '#';
+        if (typeof CONFIG === 'undefined') return;
 
-        loginLinks.forEach(link => {
-            link.href = targetUrl;
-            
-            // Se for PROD (em-breve), abre na mesma aba. Se for DEV (localhost), abre nova aba pra facilitar
-            if (typeof CONFIG !== 'undefined' && CONFIG.CURRENT_ENV === 'DEV') {
-                link.target = '_blank';
-            }
-        });
+        // Mapeamento: Classe do HTML -> Chave do Config
+        const linkMap = {
+            '.js-login-link': 'LOGIN',
+            '.js-cadastro-link': 'CADASTRO',
+            '.js-validar-link': 'VALIDAR',
+            '.js-home-link': 'HOME'
+        };
+
+        // Percorre o mapa e atualiza os hrefs
+        for (const [selector, configKey] of Object.entries(linkMap)) {
+            const links = document.querySelectorAll(selector);
+            const targetUrl = getUrl(configKey);
+
+            links.forEach(link => {
+                link.href = targetUrl;
+
+                // Lógica de abrir em nova aba apenas para o LOGIN em modo DEV
+                if (configKey === 'LOGIN' && CONFIG.CURRENT_ENV === 'DEV') {
+                    link.target = '_blank';
+                }
+            });
+        }
     }
 
-    // Executa a atualização dos links
+    // Executa a atualização
     updateEnvironmentLinks();
 
 	/* --- 1. Efeito de Scroll no Header --- */
