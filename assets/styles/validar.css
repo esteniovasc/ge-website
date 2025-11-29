@@ -1,0 +1,319 @@
+/* --- Layout Geral da Página --- */
+body {
+    background: #F9F9F9 !important; /* Cor exata solicitada */
+    animation: none !important; /* Remove o gradiente animado do style.css */
+    min-height: 100vh;
+}
+
+.main-validar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Header Ajustes --- */
+/* Garante que o header não traga o fundo azul de vidro do style.css global de forma errada */
+.header.glass-effect {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-container {
+    /* Reforça o alinhamento central */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+}
+
+/* Classe nova para o botão Voltar */
+.btn-back {
+    text-decoration: none;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content; /* Garante que não estique */
+}
+
+.btn-back:hover {
+    background-color: rgba(23, 75, 83, 0.1);
+}
+
+/* --- Títulos e Feedback --- */
+.page-title {
+    color: #3d7d32; /* Verde GE */
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.divider-green {
+    border: 0;
+    height: 3px;
+    background-color: #e5e7eb;
+    margin: 10px auto 20px auto;
+    width: 100%;
+}
+
+.feedback-area {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 24px;
+}
+
+.feedback-label {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Estilos dinâmicos de feedback */
+.feedback-success {
+    color: #1a1a1a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.feedback-error {
+    color: #d32f2f; /* Vermelho erro */
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Card Principal --- */
+.validation-card {
+    background-color: #fff; /* Card branco para destacar no fundo #F9F9F9 */
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    margin-bottom: 30px;
+}
+
+/* --- Estado de Busca (Formulário) --- */
+.input-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.input-code {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: 'Inter', monospace;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.btn-validate {
+    width: 100%;
+    max-width: 200px;
+    background-color: #3d7d32;
+    color: white;
+    font-weight: 700;
+    font-style: italic; 
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.btn-validate:active {
+    transform: scale(0.98);
+}
+
+/* --- Outras Opções --- */
+.options-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.options-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.option-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+.icon-box {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+}
+
+.icon-box svg {
+    width: 40px;
+    height: 40px;
+    color: #000;
+}
+
+.option-btn span {
+    font-size: 0.85rem;
+    color: #000;
+    text-align: center;
+}
+
+.divider-or {
+    font-weight: 700;
+    color: #000;
+}
+
+/* --- Estado de Resultado (Sucesso) --- */
+.result-title {
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.data-list p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.data-list strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.hash-text {
+    font-family: monospace;
+    font-weight: 700;
+}
+
+.warning-box {
+    background-color: transparent;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.warning-box strong {
+    color: #e67e22; /* Laranja alerta */
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.warning-box p {
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btn-outline, .btn-solid {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-outline {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.btn-solid {
+    background: #3d7d32;
+    border: 1px solid #3d7d32;
+    color: white;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #666;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* --- Footer Card --- */
+.footer-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 3px solid #e0e0e0;
+}
+
+.footer-logo img {
+    width: 70px;
+}
+
+.footer-text p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.footer-text a {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+    text-decoration: underline;
+}

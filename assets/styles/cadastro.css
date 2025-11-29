@@ -1,0 +1,345 @@
+/* --- Configuração Específica da Página de Cadastro --- */
+
+body {
+    /* Sobrescreve o gradiente animado do style.css */
+    background: #F9F9F9 !important;
+    animation: none !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* --- Header Específico de Cadastro --- */
+.header-cadastro {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.header-cadastro .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login-outline {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-login-outline:hover {
+    background-color: rgba(23, 75, 83, 0.1);
+}
+
+.btn-acompanhar {
+    background: #3d7d32;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-acompanhar:hover {
+    background: #2e6125;
+    transform: translateY(-2px);
+}
+
+/* --- Main Layout --- */
+.main-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 40px 10px;
+    width: 100%;
+}
+
+.header-text {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.header-text h1 {
+    color: #3d7d32;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.divider-green {
+    border: 0;
+    height: 4px;
+    background-color: #e5e7eb;
+    margin: 15px auto;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.header-text p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Card do Formulário --- */
+.form-card {
+    background-color: #ffffff; /* Fundo branco para destacar no cinza */
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+/* --- Estilos dos Inputs e Labels --- */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1a1a1a;
+}
+
+.section-desc {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    width: 100%;
+    outline: none;
+    transition: all 0.2s;
+    color: #333;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: #3d7d32;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(61, 125, 50, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.row-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group.half {
+    width: 50%;
+}
+
+/* Botão de Envio */
+.form-footer {
+    margin-top: 10px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #3d7d32;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(61, 125, 50, 0.2);
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2e6125;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(61, 125, 50, 0.3);
+}
+
+/* --- Máquina de Estados (Loading e Sucesso) --- */
+.form-content, .loading-content, .success-content {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+/* INITIAL */
+.state-initial .form-content {
+    display: block;
+    opacity: 1;
+}
+
+/* LOADING */
+.state-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.state-loading .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3d7d32;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* SUCCESS */
+.state-success .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.success-content h3 {
+    color: #111;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.success-content p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 80%;
+}
+
+.success-icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.success-icon-circle svg {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-email {
+    background-color: #3d7d32;
+    color: white;
+    font-weight: 700;
+    padding: 12px 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    transition: background 0.3s;
+}
+
+.btn-email:hover {
+    background-color: #2e6125;
+}
+
+.success-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.mini-logo img {
+    width: 55px;
+}
+
+.success-footer .text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.success-footer .text a {
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.success-footer .text a:hover {
+    text-decoration: underline;
+}

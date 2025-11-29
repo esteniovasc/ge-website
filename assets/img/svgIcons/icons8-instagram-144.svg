@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-bbox="5.99 5.99 36.019 36.019" height="144" width="144" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" data-type="ugc">
+    <g>
+        <radialGradient gradientUnits="userSpaceOnUse" r="44.899" cy="42.035" cx="19.38" id="1a814bd3-01d2-43dc-af10-a649eb56726f">
+            <stop stop-color="#ffdd55" offset="0"/>
+            <stop stop-color="#ff543f" offset=".328"/>
+            <stop stop-color="#fc5245" offset=".348"/>
+            <stop stop-color="#e64771" offset=".504"/>
+            <stop stop-color="#d53e91" offset=".643"/>
+            <stop stop-color="#cc39a4" offset=".761"/>
+            <stop stop-color="#c837ab" offset=".841"/>
+        </radialGradient>
+        <path d="m34.017 41.99-20 .019c-4.4.004-8.003-3.592-8.008-7.992l-.019-20c-.004-4.4 3.592-8.003 7.992-8.008l20-.019c4.4-.004 8.003 3.592 8.008 7.992l.019 20c.005 4.401-3.592 8.004-7.992 8.008z" fill="url(#1a814bd3-01d2-43dc-af10-a649eb56726f)"/>
+        <radialGradient gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 .6663 0 1.849)" r="29.813" cy="5.54" cx="11.786" id="5a74f8a2-9f6a-40ce-8d7c-f7f3029747db">
+            <stop stop-color="#4168c9" offset="0"/>
+            <stop stop-opacity="0" stop-color="#4168c9" offset=".999"/>
+        </radialGradient>
+        <path d="m34.017 41.99-20 .019c-4.4.004-8.003-3.592-8.008-7.992l-.019-20c-.004-4.4 3.592-8.003 7.992-8.008l20-.019c4.4-.004 8.003 3.592 8.008 7.992l.019 20c.005 4.401-3.592 8.004-7.992 8.008z" fill="url(#5a74f8a2-9f6a-40ce-8d7c-f7f3029747db)"/>
+        <path d="M24 31c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zm0-12c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z" fill="#ffffff"/>
+        <path fill="#ffffff" d="M33 16.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+        <path d="M30 37H18c-3.859 0-7-3.14-7-7V18c0-3.86 3.141-7 7-7h12c3.859 0 7 3.14 7 7v12c0 3.86-3.141 7-7 7zM18 13c-2.757 0-5 2.243-5 5v12c0 2.757 2.243 5 5 5h12c2.757 0 5-2.243 5-5V18c0-2.757-2.243-5-5-5H18z" fill="#ffffff"/>
+    </g>
+</svg>

@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+@media print {
+    
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .conteudoPrincipal {        
+        width: 92vw;
+    }
+
+    .secaoApresentacao {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: -webkit-fill-available;
+    }
+
+    div.blocoApresentacao {
+        min-height: 300px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        margin: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .divFooterGrid {
+        display: grid;
+        grid-template-columns: 5fr 3fr 2fr;
+        text-align:start;
+
+        /* text align e desativar o grid para o mobile*/
+        
+        width: 80vw;
+
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .divGridFirst{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .divGridHouse {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color:#00000000;
+        
+        position: relative;
+        width: 85%;
+        z-index:auto;
+        /* position: sticky;
+        top:0; */
+    }
+
+    .espacamentoHeader{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        
+    }
+
+    /* header::after{
+        background-color: #d7f6fb;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 4px 4px 12px #e8e8e8;
+    } */
+
+    ul li {
+        display: inline-block;
+    }
+    
+    ul li a {
+        display: block;
+        padding: 15px;
+        margin: 6px;
+        font-size: 1.2rem;
+        color: var(--text-ul-li-a);
+        text-decoration: none;
+        text-align: center;
+        background: var(--button-ul-li-a);
+        border-radius: 6px;
+        transition: all ease 0.3s;
+    }
+
+    ul li a:hover{
+        background: #174b53;
+        color: rgb(255, 255, 255);
+    }
+
+    ul li ul.dropdown {
+        position:fixed;
+        width:max-content;
+        background: rgba(0, 0, 0, 0.744);
+        opacity: 0;
+        z-index: -999;
+        margin-top: 50px;
+        border-radius: 6px;
+        transition: all ease 0.3s;
+    }
+
+    ul li ul.dropdown li {
+        display: block;
+    }
+
+    ul li:hover ul.dropdown {
+        display: block;
+        z-index: 999;
+        
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    .styleTextApresentacao {
+        color: white; 
+        font-size:xx-large;
+        margin: 5px;
+    }
+
+    .secaoSobreFundacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .espacamentoSecaoSobreFundacao{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0.5rem;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .espacamentoSection{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0.5rem;
+    }
+
+    .styleSubText {
+        font-weight:normal;
+    }
+
+    .button {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background: var(--background-button);
+        
+        padding: 3vh;
+        gap: 10px;
+        color: var(--color-text);
+        font-size: 1.2em;
+        border-radius: 30px;
+        transition: all ease 0.3s;
+    }
+
+    .button:hover{
+        background: #174b53;
+        color: rgb(255, 255, 255);
+    }
+
+    .redesSociais {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+    .item-redesocial {
+        background-color: var(--background-redesocial);
+
+        margin: 5px;
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .redesocial-text {
+        margin: 10px;
+    }
+
+    .redesocial-icon {
+        opacity: 0.9;
+
+        transition: all ease 0.3s;
+        cursor: pointer;
+    }
+
+    div .redesocial-icon:hover {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.05);
+    }
+
+    .downloads {
+        display: flex;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        justify-content:center;
+    }
+
+    .item-download {
+        background-color: #f9f9f9;
+
+        min-height: 150px;
+        min-width: 300px;
+
+        margin: 5px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 12px #aaaaaa;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hrVertical {
+        width: 2px !important; 
+        height: 10px !important;
+        border: none !important;
+        border-radius: 6px !important;
+        background: rgb(208, 208, 208) !important;
+    }
+
+    .styleFundCult{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .styleSubTextFooter h5 {
+        font-weight:normal;
+    }
+
+    .divFinal{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 25px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .divFinal h5 {
+        font-weight:600;
+    }
+
+    .divFinal h6 {
+        font-weight: normal;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
