@@ -21,7 +21,7 @@ const CONFIG = {
             VALIDAR: 'validar-documentos.html'
         },
         PROD: {
-            API: 'https://api-gestao.onrender.com', // (Substituir quando tiver o deploy do back)
+            API: 'http://localhost:3333', // (Substituir quando tiver o deploy do back)
             // Links externos
             LOGIN: 'em-breve.html',
             
