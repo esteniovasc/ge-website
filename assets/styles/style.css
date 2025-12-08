@@ -2,15 +2,15 @@
 
 /* --- Variáveis Globais --- */
 :root {
-	--primary-gradient: linear-gradient(92deg, #020818, #567af8, #ffffff);
+	--primary-gradient: linear-gradient(92deg, #020818, #2d469e, #ffffff);
 	--glass-bg: rgba(255, 255, 255, 0.25);
 	--glass-border: 1px solid rgba(255, 255, 255, 0.3);
 	--glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	--text-color: #000;
-	--primary-color: #174b53;
-	--accent-color: #567af8;
+	--primary-color: #38761D;
+	--accent-color: #2d469e;
 	--btn-bg: #e1e3df;
-	--btn-hover: #174b53;
+	--btn-hover: #38761D;
 	--btn-text-hover: #fff;
 }
 
@@ -80,11 +80,6 @@ a.glass-card {
 	flex-direction: column;
 	align-items: center;
 	transition: transform 0.2s, box-shadow 0.2s;
-}
-
-a.glass-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Se for div, cursor padrão */
@@ -296,7 +291,7 @@ main {
 
 .btn-cta {
 	display: inline-block;
-	background: linear-gradient(45deg, #567af8, #174b53);
+	background: linear-gradient(45deg, #4fa02b, #366e1e);
 	color: white;
 	padding: 15px 40px;
 	border-radius: 30px;
