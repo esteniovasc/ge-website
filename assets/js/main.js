@@ -231,5 +231,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Carrossel de Funcionalidades (5 segundos)
 	setupCarousel('carousel-funcionalidades', 5000);
+	/* --- 4. Animação do Botão CTA --- */
+	const ctaButton = document.querySelector('.btn-cta');
+	if (ctaButton) {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// Delay de 1 segundo (1000ms) após aparecer
+					setTimeout(() => {
+						ctaButton.classList.add('gradient-animating');
+					}, 500);
 
+					// Opcional: Parar de observar depois de ativar (roda apenas uma vez)
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.5 }); // Dispara quando 50% do botão estiver visível
+
+		observer.observe(ctaButton);
+	}
 });

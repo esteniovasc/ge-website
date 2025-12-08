@@ -289,18 +289,37 @@ main {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* --- Animação CTA --- */
+@property --cta-angle {
+	syntax: '<angle>';
+	initial-value: 45deg;
+	inherits: false;
+}
+
 .btn-cta {
 	display: inline-block;
-	background: linear-gradient(45deg, #4fa02b, #366e1e);
+	background: linear-gradient(var(--cta-angle), #77de49, #366e1e);
 	color: white;
 	padding: 15px 40px;
 	border-radius: 30px;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 1.1rem;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s;
+	transition: transform 0.2s, --cta-angle 1s;
+	/* Transição para reset suave se precisar */
 	margin-top: 10px;
+}
+
+.btn-cta.gradient-animating {
+	animation: rotate-gradient 3s linear infinite;
+}
+
+@keyframes rotate-gradient {
+	to {
+		--cta-angle: 405deg;
+		/* 45 + 360 */
+	}
 }
 
 .btn-cta:hover {
