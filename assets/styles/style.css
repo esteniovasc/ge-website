@@ -207,6 +207,8 @@ main {
 .carousel-track {
 	display: flex;
 	/* Coloca as imagens lado a lado */
+	gap: 20px;
+	/* Espaço entre os slides */
 	transition: transform 0.5s ease-in-out;
 	/* Animação do slide */
 	width: 100%;

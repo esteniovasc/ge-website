@@ -94,7 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		function getSlideWidth() {
 			// Largura visual do primeiro slide (deve ser a largura do container)
-			return slides[0].offsetWidth;
+			const slide = slides[0];
+			const style = window.getComputedStyle(track);
+			const gap = parseFloat(style.gap) || 0;
+			return slide.offsetWidth + gap;
 		}
 
 		function setSliderPosition() {
