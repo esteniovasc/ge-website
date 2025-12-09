@@ -127,14 +127,17 @@ div.glass-card {
 }
 
 .logo {
-	width: 40px;
+	width: 50px;
 	/* Ajuste o tamanho da logo aqui */
 	height: auto;
+	text-decoration: none;
 }
 
-.logo-area h1 {
-	font-size: 1.1rem;
+.logo-area a>h1 {
+	font-size: 0.75rem;
 	font-weight: 700;
+	color: #000;
+	text-decoration: none;
 }
 
 .btn-login {
@@ -417,6 +420,6 @@ main {
 	}
 
 	.header-container {
-		padding: 15px 40px;
+		padding: 10px 90px;
 	}
 }

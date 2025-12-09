@@ -1,123 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação de Documentos - Gestão Escolar</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/validar.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validação de Documentos - Gestão Escolar</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/styles/style.css">
+	<link rel="stylesheet" href="assets/styles/validar.css">
 </head>
+
 <body>
 
-    <header class="header glass-effect">
-        <div class="header-container">
-            <a href="#" class="logo-area js-home-link">
+	<header class="header glass-effect">
+		<div class="header-container">
+			<!-- <a href="#" class="logo-area js-home-link">
                 <img src="assets/img/logoGE.png" alt="Logo Gestão Escolar" class="logo">
                 <h1>Gestão Escolar</h1>
-            </a>
-            <a href="#" class="btn-back js-home-link">Voltar</a>
-        </div>
-    </header>
+            </a> -->
+			<div class="logo-area js-home-link">
+				<img src="assets/img/logoGE.png" alt="Logo Gestão Escolar" class="logo">
+				<h2>Gestão Escolar</h2>
+			</div>
+			<a href="#" class="btn-back js-home-link">Voltar</a>
+		</div>
+	</header>
 
-    <main class="main-validar">
-        
-        <h1 class="page-title">Validação de documentos</h1>
-        <hr class="divider-green">
+	<main class="main-validar">
 
-        <div id="feedbackArea" class="feedback-area">
-            <span class="feedback-label">Escolha uma opção para conferir a veracidade da informação do documento recebido</span>
-        </div>
+		<h1 class="page-title">Validação de documentos</h1>
+		<hr class="divider-green">
 
-        <div class="validation-card">
-            
-            <div id="searchState" class="card-state">
-                
-                <form id="validationForm">
-                    <label for="docCode" class="input-label">Digite o código presente no documento:</label>
-                    <input type="text" id="docCode" class="input-code" placeholder="00-XXXX-XX-0000" maxlength="19" autocomplete="off">
-                    
-                    <button type="submit" class="btn-validate">Validar</button>
-                </form>
+		<div id="feedbackArea" class="feedback-area">
+			<span class="feedback-label">Escolha uma opção para conferir a veracidade da informação do documento
+				recebido</span>
+		</div>
 
-                <div class="other-options">
-                    <p class="options-title">Outras opções:</p>
-                    
-                    <div class="options-grid">
-                        <button class="option-btn" onclick="alert('Funcionalidade de câmera em desenvolvimento')">
-                            <div class="icon-box">
-                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h6v6h-6zM2 9h8M9 2v8M15 9h8M22 2v8M2 15h8M9 15v8M15 15v3m3 3v3m3-6v3"/>
-                                </svg>
-                            </div>
-                            <span>Escanear QR Code</span>
-                        </button>
+		<div class="validation-card">
 
-                        <span class="divider-or">OU</span>
+			<div id="searchState" class="card-state">
 
-                        <button class="option-btn" onclick="document.getElementById('fileUpload').click()">
-                            <div class="icon-box">
-                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="12" y1="18" x2="12" y2="12"></line>
-                                    <line x1="9" y1="15" x2="12" y2="12"></line>
-                                    <line x1="15" y1="15" x2="12" y2="12"></line>
-                                </svg>
-                            </div>
-                            <span>Anexar documento</span>
-                            <input type="file" id="fileUpload" style="display: none;" accept=".pdf,.jpg,.png">
-                        </button>
-                    </div>
-                </div>
-            </div>
+				<form id="validationForm">
+					<label for="docCode" class="input-label">Digite o código presente no documento:</label>
+					<input type="text" id="docCode" class="input-code" placeholder="00-XXXX-XX-0000" maxlength="19"
+						autocomplete="off">
 
-            <div id="resultState" class="card-state" style="display: none;">
-                
-                <h3 class="result-title">Dados do documento para conferência</h3>
-                
-                <div class="data-list">
-                    <p><strong>Tipo:</strong> <span id="resTipo">Histórico escolar</span></p>
-                    <p><strong>Emissão:</strong> <span id="resEmissao">11/10/2024 às 14:43</span></p>
-                    <p><strong>Validade:</strong> <span id="resValidade">outubro de 2029</span></p>
-                    <p><strong>Iniciais do requerente:</strong> <span id="resIniciais">F. E. S. V</span></p>
-                    <p><strong>CPF do requerente:</strong> <span id="resCpf">xxx.134.763-xx</span></p>
-                    <p><strong>Emitido por:</strong> <span id="resEscola">CESA - Centro Educacional Santo Antônio</span></p>
-                    <p><strong>Hash:</strong> <span id="resHash" class="hash-text">78-AKZL-BT-2024</span></p>
-                </div>
+					<button type="submit" class="btn-validate">Validar</button>
+				</form>
 
-                <div class="warning-box">
-                    <strong>Importante ⚠️</strong>
-                    <p>Se você possui uma cópia impressa do doc. faça o download e confirme as informações</p>
-                </div>
+				<div class="other-options">
+					<p class="options-title">Outras opções:</p>
 
-                <div class="action-buttons">
-                    <button class="btn-outline">Contato da instituição</button>
-                    <button class="btn-solid">Baixar doc.</button>
-                </div>
+					<div class="options-grid">
+						<button class="option-btn" onclick="alert('Funcionalidade de câmera em desenvolvimento')">
+							<div class="icon-box">
+								<img src="assets/img/scan.webp" alt="Escanear QR Code"
+									style="width: 65px; border-radius: 5px;">
+							</div>
+							<span>Escanear QR Code</span>
+						</button>
 
-                <button id="btnNewSearch" class="btn-link">Nova consulta</button>
-            </div>
+						<span class="divider-or">OU</span>
 
-        </div> 
+						<button class="option-btn" onclick="document.getElementById('fileUpload').click()">
+							<div class="icon-box">
+								<img src="assets/img/svgIcons/assignments-svgrepo-com.svg" alt="Anexar documento"
+									style="width: 45px;">
+							</div>
+							<span>Anexar documento</span>
+							<input type="file" id="fileUpload" style="display: none;" accept=".pdf,.jpg,.png">
+						</button>
+					</div>
+				</div>
+			</div>
 
-        <div class="footer-card">
-            <div class="footer-logo">
-                <img src="assets/img/logoGE.png" alt="Logo">
-            </div>
-            <div class="footer-text">
-                <p>Este é um serviço do sistema Gestão Escolar</p>
-                <a href="#" class="js-home-link">Adquirir acesso para minha escola ↗</a>
-            </div>
-        </div>
+			<div id="resultState" class="card-state" style="display: none;">
 
-    </main>
-	
+				<h3 class="result-title">Dados do documento para conferência</h3>
+
+				<div class="data-list">
+					<p><strong>Tipo:</strong> <span id="resTipo">Histórico escolar</span></p>
+					<p><strong>Emissão:</strong> <span id="resEmissao">11/10/2024 às 14:43</span></p>
+					<p><strong>Validade:</strong> <span id="resValidade">outubro de 2029</span></p>
+					<p><strong>Iniciais do requerente:</strong> <span id="resIniciais">F. E. S. V</span></p>
+					<p><strong>CPF do requerente:</strong> <span id="resCpf">xxx.134.763-xx</span></p>
+					<p><strong>Emitido por:</strong> <span id="resEscola">CESA - Centro Educacional Santo Antônio</span>
+					</p>
+					<p><strong>Hash:</strong> <span id="resHash" class="hash-text">78-AKZL-BT-2024</span></p>
+				</div>
+
+				<div class="warning-box">
+					<strong>Importante ⚠️</strong>
+					<p>Se você possui uma cópia impressa do doc. faça o download e confirme as informações</p>
+				</div>
+
+				<div class="action-buttons">
+					<button class="btn-outline">Contato da instituição</button>
+					<button class="btn-solid">Baixar doc.</button>
+				</div>
+
+				<button id="btnNewSearch" class="btn-link">Nova consulta</button>
+			</div>
+
+		</div>
+
+		<div class="footer-card">
+			<div class="footer-logo">
+				<img src="assets/img/logoGE.png" alt="Logo">
+			</div>
+			<div class="footer-text">
+				<p>Este é um serviço do sistema Gestão Escolar</p>
+				<a href="#" class="js-home-link">Adquirir acesso para minha escola ↗</a>
+			</div>
+		</div>
+
+	</main>
+
 	<script src="assets/js/config.js"></script>
-    <script src="assets/js/validar.js"></script>
+	<script src="assets/js/validar.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
+
 </html>
