@@ -18,7 +18,8 @@ const CONFIG = {
 			// Links internos locais DEVEM ser apenas o nome do arquivo (SEM a barra / na frente)
 			HOME: 'index.html',
 			CADASTRO: 'cadastro.html',
-			VALIDAR: 'validar-documentos.html'
+			VALIDAR: 'validar-documentos.html',
+			EM_BREVE: 'em-breve.html'
 		},
 		PROD: {
 			API: 'http://localhost:3333', // (Substituir quando tiver o deploy do back)

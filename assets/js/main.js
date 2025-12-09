@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			'.js-login-link': 'LOGIN',
 			'.js-cadastro-link': 'CADASTRO',
 			'.js-validar-link': 'VALIDAR',
-			'.js-home-link': 'HOME'
+			'.js-home-link': 'HOME',
+			'.js-em-breve-link': 'EM_BREVE',
+			'.js-instagram-link': 'INSTAGRAM',
+			'.js-privacy-link': 'PRIVACY',
+			'.js-terms-link': 'TERMS'
 		};
 
 		// Percorre o mapa e atualiza os hrefs

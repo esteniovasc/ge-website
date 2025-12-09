@@ -363,6 +363,10 @@ main {
 	text-align: center;
 }
 
+.legal a:hover {
+	text-decoration: underline;
+}
+
 .footer-grid {
 	display: flex;
 	flex-direction: column;
