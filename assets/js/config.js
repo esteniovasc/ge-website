@@ -29,7 +29,8 @@ const CONFIG = {
 			// Links internos produção (COM a barra / para URLs limpas)
 			HOME: '/',
 			CADASTRO: '/cadastro',
-			VALIDAR: '/validar-documentos'
+			VALIDAR: '/validar-documentos',
+			EM_BREVE: '/em-breve'
 		}
 	}
 };

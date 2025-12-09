@@ -1,180 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Gestão Escolar</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/styles/style.css"> <link rel="stylesheet" href="assets/styles/cadastro.css"> </head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro - Gestão Escolar</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/styles/style.css">
+	<link rel="stylesheet" href="assets/styles/cadastro.css">
+</head>
+
 <body>
 
-    <header class="header-cadastro">
-        <div class="header-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/img/logoGE.png" alt="Logo Gestão Escolar" class="logo">
-            </a>
-            <div class="header-actions">
+	<header class="header-cadastro">
+		<div class="header-container">
+			<a href="index.html" class="logo-area">
+				<img src="assets/img/logoGE.png" alt="Logo Gestão Escolar" class="logo">
+			</a>
+			<div class="header-actions">
 				<a href="#" class="btn-login-outline js-login-link">Entrar</a>
-				<a href="#" class="btn-acompanhar js-login-link">Acompanhar cadastro</a>
+				<a href="#" class="btn-acompanhar js-em-breve-link">Acompanhar cadastro</a>
 			</div>
-        </div>
-    </header>
+		</div>
+	</header>
 
-    <main class="main-cadastro">
-        
-        <div class="header-text">
-            <h1>Formulário de cadastro</h1>
-            <hr class="divider-green">
-            <p>Preencha as informações a seguir para que possamos enviar o link do seu primeiro acesso.</p>
-        </div>
+	<main class="main-cadastro">
 
-        <div class="form-card state-initial" id="formCard">
-            
-            <form id="cadastroForm" class="form-content">
-                
-                <div class="form-section">
-                    <h3>🧑🏼‍🏫 Dados do solicitante</h3>
-                    <p class="section-desc">Necessários para que entremos em contato em caso de erro</p>
-                    
-                    <div class="input-group">
-                        <label for="nome">Nome completo:</label>
-                        <input type="text" id="nome" name="nome_solicitante" required placeholder="Ex: Maria da Silva">
-                    </div>
+		<div class="header-text">
+			<h1>Formulário de cadastro</h1>
+			<hr class="divider-green">
+			<p>Preencha as informações a seguir para que possamos enviar o link do seu primeiro acesso.</p>
+		</div>
 
-                    <div class="input-group">
-                        <label for="email">Seu melhor e-mail:</label>
-                        <input type="email" id="email" name="email_solicitante" required placeholder="exemplo@email.com">
-                    </div>
+		<div class="form-card state-initial" id="formCard">
 
-                    <div class="input-group">
-                        <label for="telefone">Telefone (de preferência WhatsApp):</label>
-                        <input type="tel" id="telefone" name="telefone_solicitante" required placeholder="(XX) 9 XXXX-XXXX" maxlength="15">
-                    </div>
+			<form id="cadastroForm" class="form-content">
 
-                    <div class="input-group">
-                        <label for="cargo">Cargo na Escola:</label>
-                        <select id="cargo" name="cargo_solicitante" required>
-                            <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="Diretor(a)">Sou diretor(a)</option>
-                            <option value="Coordenador(a)">Sou coordenador(a)</option>
-                            <option value="Secretário(a)">Sou secretário(a)</option>
-                            <option value="Professor(a)">Sou professor(a)</option>
-                            <option value="Outro">Outro</option>
-                        </select>
-                    </div>
-                </div>
+				<div class="form-section">
+					<h3>🧑🏼‍🏫 Dados do solicitante</h3>
+					<p class="section-desc">Necessários para que entremos em contato em caso de erro</p>
 
-                <div class="form-section">
-                    <h3>🏫 Dados da escola</h3>
-                    <p class="section-desc">Necessários para garantir que só escolas reais acessem o nosso sistema</p>
+					<div class="input-group">
+						<label for="nome">Nome completo:</label>
+						<input type="text" id="nome" name="nome_solicitante" required placeholder="Ex: Maria da Silva">
+					</div>
 
-                    <div class="input-group">
-                        <label for="nome_escola">Nome da escola:</label>
-                        <input type="text" id="nome_escola" name="nome_escola" required placeholder="Ex: Centro Educacional...">
-                    </div>
+					<div class="input-group">
+						<label for="email">Seu melhor e-mail:</label>
+						<input type="email" id="email" name="email_solicitante" required
+							placeholder="exemplo@email.com">
+					</div>
 
-                    <div class="input-group">
-                        <label for="inep">Código INEP:</label>
-                        <input type="text" id="inep" name="codigo_inep" required placeholder="8 dígitos numéricos" maxlength="8" pattern="\d{8}" title="Deve conter exatamente 8 números">
-                    </div>
+					<div class="input-group">
+						<label for="telefone">Telefone (de preferência WhatsApp):</label>
+						<input type="tel" id="telefone" name="telefone_solicitante" required
+							placeholder="(XX) 9 XXXX-XXXX" maxlength="15">
+					</div>
 
-                    <div class="input-group">
-                        <label for="cnpj">CNPJ:</label>
-                        <input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00" maxlength="18">
-                    </div>
-                </div>
+					<div class="input-group">
+						<label for="cargo">Cargo na Escola:</label>
+						<select id="cargo" name="cargo_solicitante" required>
+							<option value="" disabled selected>Escolha uma opção</option>
+							<option value="Diretor(a)">Sou diretor(a)</option>
+							<option value="Coordenador(a)">Sou coordenador(a)</option>
+							<option value="Secretário(a)">Sou secretário(a)</option>
+							<option value="Professor(a)">Sou professor(a)</option>
+							<option value="Outro">Outro</option>
+						</select>
+					</div>
+				</div>
 
-                <div class="form-section">
-                    <h3>📊 Outras informações</h3>
-                    <p class="section-desc">Necessários para entender melhor o perfil do seu espaço</p>
+				<div class="form-section">
+					<h3>🏫 Dados da escola</h3>
+					<p class="section-desc">Necessários para garantir que só escolas reais acessem o nosso sistema</p>
 
-                    <div class="input-group">
-                        <label for="faixa_alunos">Faixa de alunos:</label>
-                        <select id="faixa_alunos" name="faixa_alunos" required>
-                            <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="Até 50 alunos">Até 50 alunos</option>
-                            <option value="51 a 150 alunos">51 a 150 alunos</option>
-                            <option value="151 a 300 alunos">151 a 300 alunos</option>
-                            <option value="301 a 500 alunos">301 a 500 alunos</option>
-                            <option value="Mais de 500 alunos">Mais de 500 alunos</option>
-                        </select>
-                    </div>
+					<div class="input-group">
+						<label for="nome_escola">Nome da escola:</label>
+						<input type="text" id="nome_escola" name="nome_escola" required
+							placeholder="Ex: Centro Educacional...">
+					</div>
 
-                    <div class="input-group">
-                        <label for="tipo_escola">Tipo de escola:</label>
-                        <select id="tipo_escola" name="tipo_escola" required>
-                            <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="Privada">Privada</option>
-                            <option value="Publica">Pública</option>
-                        </select>
-                    </div>
+					<div class="input-group">
+						<label for="inep">Código INEP:</label>
+						<input type="text" id="inep" name="codigo_inep" required placeholder="8 dígitos numéricos"
+							maxlength="8" pattern="\d{8}" title="Deve conter exatamente 8 números">
+					</div>
 
-                    <div class="row-group">
-                        <div class="input-group half">
-                            <label for="estado">Estado</label>
-                            <select id="estado" name="estado" required>
-                                <option value="" disabled selected>UF</option>
-                                </select>
-                        </div>
-                        <div class="input-group half">
-                            <label for="cidade">Cidade</label>
-                            <select id="cidade" name="cidade" required disabled>
-                                <option value="" disabled selected>Selecione o estado</option>
-                                </select>
-                        </div>
-                    </div>
+					<div class="input-group">
+						<label for="cnpj">CNPJ:</label>
+						<input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00"
+							maxlength="18">
+					</div>
+				</div>
 
-                    <div class="input-group">
-                        <label for="indicacao">Código de indicação (se tiver):</label>
-                        <input type="text" id="indicacao" name="codigo_indicacao" placeholder="COD-INDICACAO">
-                    </div>
+				<div class="form-section">
+					<h3>📊 Outras informações</h3>
+					<p class="section-desc">Necessários para entender melhor o perfil do seu espaço</p>
 
-                    <div class="input-group">
-                        <label for="desafio">Qual o maior desafio para a sua escola hoje?</label>
-                        <textarea id="desafio" name="maior_desafio" rows="3" placeholder="Dar a atenção necessária aos pais e alunos..."></textarea>
-                    </div>
-                </div>
+					<div class="input-group">
+						<!-- Precisa alterar o faixa_alunos por quantidade_alunos
+						 	 A informação vai bater com o nome do campo no schema do prisma -->
+						<label for="faixa_alunos">Quantidade de alunos:</label>
+						<select id="faixa_alunos" name="faixa_alunos" required>
+							<option value="" disabled selected>Escolha uma opção</option>
+							<option value="Até 50 alunos">Até 50 alunos</option>
+							<option value="51 a 150 alunos">51 a 150 alunos</option>
+							<option value="151 a 300 alunos">151 a 300 alunos</option>
+							<option value="301 a 500 alunos">301 a 500 alunos</option>
+							<option value="Mais de 500 alunos">Mais de 500 alunos</option>
+						</select>
+					</div>
 
-                <div class="form-footer">
-                    <button type="submit" class="btn-submit">Solicitar acesso</button>
-                </div>
-            </form>
+					<div class="input-group">
+						<label for="tipo_escola">Tipo de escola:</label>
+						<select id="tipo_escola" name="tipo_escola" required>
+							<option value="" disabled selected>Escolha uma opção</option>
+							<option value="Privada">Privada</option>
+							<option value="Publica">Pública</option>
+						</select>
+					</div>
 
-            <div class="loading-content">
-                <div class="spinner"></div>
-                <p>Enviando sua solicitação...</p>
-            </div>
+					<div class="row-group">
+						<div class="input-group half">
+							<label for="estado">Estado</label>
+							<select id="estado" name="estado" required>
+								<option value="" disabled selected>UF</option>
+							</select>
+						</div>
+						<div class="input-group half">
+							<label for="cidade">Cidade</label>
+							<select id="cidade" name="cidade" required disabled>
+								<option value="" disabled selected>Selecione o estado</option>
+							</select>
+						</div>
+					</div>
 
-            <div class="success-content">
-                <h3>Cadastro concluído com sucesso ✅</h3>
-                <p>Se tudo estiver certo, dentro de 24h úteis, iremos enviar um e-mail com o link para o seu primeiro acesso.</p>
-                
-                <div class="success-icon-circle">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 13L9 17L19 7" stroke="#174b53" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
+					<div class="input-group">
+						<label for="indicacao">Código de indicação (se tiver):</label>
+						<input type="text" id="indicacao" name="codigo_indicacao" placeholder="COD-INDICACAO">
+					</div>
 
-                <button onclick="window.location.href='mailto:'" class="btn-email">Ir para o e-mail</button>
-                
-                <div class="success-footer">
-                    <div class="mini-logo">
-                        <img src="assets/img/logoGE.png" alt="Logo">
-                    </div>
-                    <div class="text">
-                        <p>A nova geração de serviços para ambientes educacionais.</p>
-                        <a href="index.html">Adquirir acesso para minha escola ↗</a>
-                    </div>
-                </div>
-            </div>
+					<div class="input-group">
+						<label for="desafio">Qual o maior desafio para a sua escola hoje?</label>
+						<textarea id="desafio" name="maior_desafio" rows="3"
+							placeholder="Dar a atenção necessária aos pais e alunos..."></textarea>
+					</div>
+				</div>
 
-        </div> </main>
-	
+				<div class="form-footer">
+					<button type="submit" class="btn-submit">Solicitar acesso</button>
+				</div>
+			</form>
+
+			<div class="loading-content">
+				<div class="spinner"></div>
+				<p>Enviando sua solicitação...</p>
+			</div>
+
+			<div class="success-content">
+				<h3>Cadastro concluído com sucesso ✅</h3>
+				<p>Se tudo estiver certo, dentro de 24h úteis, iremos enviar um e-mail com o link para o seu primeiro
+					acesso.</p>
+
+				<div class="success-icon-circle">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 13L9 17L19 7" stroke="#174b53" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+				</div>
+
+				<button onclick="window.location.href='mailto:'" class="btn-email">Ir para o e-mail</button>
+
+				<div class="success-footer">
+					<div class="mini-logo">
+						<img src="assets/img/logoGE.png" alt="Logo">
+					</div>
+					<div class="text">
+						<p>A nova geração de serviços para ambientes educacionais.</p>
+						<a href="index.html">Adquirir acesso para minha escola ↗</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
 	<script src="assets/js/config.js"></script>
-    <script src="assets/js/cadastro.js"></script>
+	<script src="assets/js/cadastro.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
+
 </html>
