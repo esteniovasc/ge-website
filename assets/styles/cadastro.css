@@ -11,6 +11,8 @@ body {
     color: #333;
 }
 
+/* ... (previous styles) ... */
+
 /* --- Header Específico de Cadastro --- */
 .header-cadastro {
     display: flex;
@@ -79,6 +81,9 @@ body {
     text-align: center;
     max-width: 600px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-text h1 {
@@ -151,6 +156,28 @@ body {
     color: #444;
 }
 
+/* Indicador de Obrigatório (*) */
+.input-group label:has(+ input[required]),
+.input-group label:has(+ select[required]),
+.input-group label:has(+ textarea[required]) {
+    /* Método moderno com :has() */
+}
+/* Fallback e método simples: Adicionamos classe via JS ou assumimos todos que tem required no HTML */
+/* Como o CSS não consegue ver o atributo do irmão anterior facilmente sem :has, vamos usar uma classe auxiliar 'required-mark' que poderíamos por no HTML, 
+   OU usar :has que é suportado na maioria dos browsers modernos. 
+   Para garantir, o usuário pediu "adicione um asterisco", vou usar :after no label geral se eu garantir que todos são required, 
+   mas como nem todos são, vou usar a estratégia do JS adicionar uma classe ou span, ou usar :has.
+   Vou assumir suporte a :has pois é 2024+.
+*/
+.input-group label:has(+ input[required])::after,
+.input-group label:has(+ select[required])::after,
+.input-group label:has(+ textarea[required])::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
 .input-group input, 
 .input-group select, 
 .input-group textarea {
@@ -171,6 +198,16 @@ body {
     border-color: #3d7d32;
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(61, 125, 50, 0.1);
+}
+
+/* Erro de Validação */
+.input-error {
+    border: 1px solid #e74c3c !important;
+    background-color: #fff8f8 !important;
+}
+.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+    border-color: #e74c3c !important;
 }
 
 .input-group input::placeholder {
