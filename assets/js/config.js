@@ -22,7 +22,7 @@ const CONFIG = {
 			EM_BREVE: 'em-breve.html'
 		},
 		PROD: {
-			API: 'http://localhost:3333', // (Substituir quando tiver o deploy do back)
+			API: 'https://api.gestaoescolar.site', // (Substituir quando tiver o deploy do back)
 			// Links externos
 			LOGIN: 'https://app.gestaoescolar.tech/login',
 
