@@ -24,7 +24,7 @@ const CONFIG = {
 		PROD: {
 			API: 'https://api.gestaoescolar.site', // (Substituir quando tiver o deploy do back)
 			// Links externos
-			LOGIN: 'https://app.gestaoescolar.tech/login',
+			LOGIN: 'https://app.gestaoescolar.site/login',
 
 			// Links internos produção (COM a barra / para URLs limpas)
 			HOME: '/',
